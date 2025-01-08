@@ -71,6 +71,7 @@ const VOICE = 'ash';
 // The port your server will listen on
 const PORT = process.env.PORT || 5050;
 
+
 // (Optional) Which event types from OpenAI to log to console
 const LOG_EVENT_TYPES = [
   'response.content.done',
@@ -95,6 +96,7 @@ const SHOW_TIMING_MATH = false;
 fastify.get('/', async (request, reply) => {
   reply.send({ message: 'Twilio Media Stream Server is running!' });
 });
+
 
 /**
  * /incoming-call
@@ -362,10 +364,13 @@ fastify.register(async (fastify) => {
 /**********************************************************************
  * 7. Start the Fastify Server
  **********************************************************************/
-fastify.listen({ port: PORT }, (err) => {
-  if (err) {
-    console.error(err);
-    process.exit(1);
-  }
-  console.log(`>>> Server listening on port ${PORT}`);
-});
+fastify.listen({ 
+    port: PORT,
+    host: '0.0.0.0'  // This is the key addition for Railway
+  }, (err) => {
+    if (err) {
+      console.error(err);
+      process.exit(1);
+    }
+    console.log(`>>> Server listening on port ${PORT}`);
+  });
