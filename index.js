@@ -108,7 +108,7 @@ fastify.all('/incoming-call', async (request, reply) => {
   // Construct TwiML
   const twimlResponse = `<?xml version="1.0" encoding="UTF-8"?>
     <Response>
-      <Say>Warning: You have 10 minutes to extract the information. Begin interrogation at the tone.</Say>
+      <Say>Warning: You have 10 minutes to extract the information. Begin interrogation.</Say>
     <Pause length="1"/>
       <play>https://www.soundjay.com/buttons/sounds/beep-01a.mp3</play>
       <Connect>
