@@ -110,11 +110,11 @@ fastify.all('/incoming-call', async (request, reply) => {
   // Construct TwiML
   const twimlResponse = `<?xml version="1.0" encoding="UTF-8"?>
     <Response>
-      <Say>Warning: You have 10 minutes to extract the information. Begin interrogation.</Say>
+      <Say>Warning: You have 10 minutes to extract the information. Begin interrogation after the tone.</Say>
     <Pause length="1"/>
-      <play>https://www.soundjay.com/buttons/sounds/beep-01a.mp3</play>
+      <Play>https://www.soundjay.com/buttons/sounds/beep-01a.mp3</Play>
       <Connect>
-        <Stream url="wss://${request.headers.host}/media-stream" />
+        <Stream url="wss://twilio-ai-production.up.railway.app/media-stream" />
       </Connect>
     </Response>`;
 
