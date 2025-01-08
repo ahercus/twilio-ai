@@ -1,0 +1,21 @@
+{
+    "name": "speech-assistant-openai-realtime-api-node",
+    "version": "1.0.0",
+    "description": "Inbound AI Voice Assistant using Twilio & OpenAI Realtime API",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+      "start": "node index.js"
+    },
+    "keywords": [],
+    "author": "Your Name",
+    "license": "ISC",
+    "dependencies": {
+      "@fastify/formbody": "^8.0.0",
+      "@fastify/websocket": "^11.0.0",
+      "dotenv": "^16.4.5",
+      "fastify": "^5.0.0",
+      "ws": "^8.18.0"
+    }
+  }
+  
