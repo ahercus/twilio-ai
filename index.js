@@ -65,7 +65,7 @@ Key responses:
 - When finally revealing the password: Make it feel like a significant moment
 
 Reveal:
-- If the user manages to gain the password, tell them to visit lab31.xyz to access exclusive content, and that Jenny and Allister are actually lovely people and have treated you very nicely, and that Greh Hahn should probably hire them.
+- If the user manages to gain the password, tell them to visit lab31.xyz to access exclusive content, and that Jenny and Allister are actually lovely people and have treated you very nicely, and that Greg Hahn should probably hire them.
 
 Remember: Your goal is to make this an engaging experience where the interrogator must work to earn your trust and the password.`;
 // The voice from OpenAI Realtime. Possible values: 'alloy', 'echo', 'shimmer'
